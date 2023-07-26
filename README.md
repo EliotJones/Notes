@@ -12,6 +12,13 @@ From local to remote:
 scp -l 4200 /c/Users/eliot/path/to/file username@ip-or-host:/path/on/remote
 ```
 
+To do it for a folder with contents just add the recursive `-r` flag:
+
+```
+scp -r /c/Users/eliot/path/to/folder username@ip-or-host:/path/on/remote
+```
+
+
 The `-l` flag limits the rate of transfer in Kbit/s otherwise you will saturate your network upload and break the internet. A value of around 4000 (500 KB/s) is reasonable for a slowish home router.
 
 From remote to local just reverse the arguments:
